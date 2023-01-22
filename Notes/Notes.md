@@ -54,3 +54,28 @@ function App() {
 5. In-line styles are provided as Objects
 ```
 
+### Day-2
+
+##### Prop System
+
+```markdown
+1. Pass data from a parent to a child
+2. Allows a parent to configure each child differently (show different text, different styles. etc)
+3. One way flow of data. Child can't push props back up
+```
+
+###### Example
+
+<pre>
+1. Add attributes to a JSX element
+function App(){
+	return <Child color='red' />
+}
+2. React collects all the attributes and put them into an object
+`{color: 'red'}`
+3. Props object can be access from the first argument of <b>Child Component</b>
+function Child(props){
+	return <div>{props.color}</div>
+}
+4. Use the Props as `props.color`
+</pre>
